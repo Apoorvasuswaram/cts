@@ -1,0 +1,14 @@
+package com;
+
+public class EmployeeMain {
+
+	public static void main(String[] args) {
+		Employeedetails e=new Employeedetails(1,1000,"app","knl",new Address(123,"sql",500987));
+		System.out.println(e);
+		WageEmployee w=new WageEmployee(12, 1000,"appu","chennai",8,9,(new Address(518005,"ashok nagar",45)));
+		System.out.println(w.calculateSalary());
+		// TODO Auto-generated method stub
+
+	}
+
+}

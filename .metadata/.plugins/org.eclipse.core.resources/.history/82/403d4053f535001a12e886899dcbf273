@@ -1,0 +1,26 @@
+package com;
+import java.util.Scanner;
+import java.io.*;
+
+public class WritingTextFiles{
+
+    public static void main (String [] args) throws IOException{
+        FileReader fr= new FileReader("E:\\cts\\appu1.txt");  
+       // Scanner in= new Scanner (System.in);
+       // String testwords=in.nextLine();  
+       // fr.Reader(testwords);  
+        BufferedReader r = new BufferedReader( new FileReader( "E:\\cts\\appu1.txt" ) );  
+        StringBuilder sb=new StringBuilder();
+        String line= r.readLine();
+        while(line!= null)
+        {
+        	sb.append(line).append("\n");
+        	line=r.readLine();
+        	System.out.println(sb);
+        }
+        String fileASString=sb.toString();
+        
+        System.out.print(fileASString);  
+        
+    }
+}

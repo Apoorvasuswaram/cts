@@ -1,0 +1,18 @@
+package com;
+
+public class String1 {
+	
+	String1 s1= new String1("Appu");
+	String1 s2=new String1("nandu");
+	public static void main(java.lang.String[] args) {
+		// TODO Auto-generated method stub
+		String1 z=new String1();
+		System.out.println(z.s1.charAt(2));
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+
+	}
+
+}

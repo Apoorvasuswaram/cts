@@ -1,0 +1,66 @@
+package com;
+
+public class Employeedetails {
+	static int emp_id,emp_salary;
+	static String emp_name,emp_location;
+    public Employeedetails(int emp_id, int emp_salary, String emp_name, String emp_location) {
+		super();
+		this.emp_id = emp_id;
+		this.emp_salary = emp_salary;
+		this.emp_name = emp_name;
+		this.emp_location = emp_location;
+	}
+	
+	public int getEmp_id() {
+		return emp_id;
+	}
+
+	public void setEmp_id(int emp_id) {
+		this.emp_id = emp_id;
+	}
+
+	public int getEmp_salary() {
+		return emp_salary;
+	}
+
+	public void setEmp_salary(int emp_salary) {
+		this.emp_salary = emp_salary;
+	}
+
+	public String getEmp_name() {
+		return emp_name;
+	}
+
+	public void setEmp_name(String emp_name) {
+		this.emp_name = emp_name;
+	}
+
+	public String getEmp_location() {
+		return emp_location;
+	}
+
+	public void setEmp_location(String emp_location) {
+		this.emp_location = emp_location;
+	}
+	/*public int details()
+	{
+		System.out.println(202,30000,"apoorva","chennai");
+	}*/
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employeedetails e=new Employeedetails(202,2000,"appu","chennai");
+		System.out.println("emp id is:" +emp_id+\n"emp sal is:" +emp_salary+\n"emp name is:" +emp_name+\n "emp loc is:" +emp_location);
+		
+		/*e.setEmp_id(10);
+		e.setEmp_salary(3000);
+		e.setEmp_name("appu");
+		e.setEmp_location("chennai");
+		e.getEmp_id();
+		e.getEmp_salary();
+		e.getEmp_name();
+		e.getEmp_location();*/
+
+	}
+
+}

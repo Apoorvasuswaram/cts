@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="orange">
+<form>
+
+  Employee name:<br>
+  <input type="text" name="firstname"><br>
+
+  Employee ID:<br>
+  <input type="text" name="Id"><br>
+  Employee Location:<br><br>
+Link:<br>  <p><a href="https://www.w3schools.com">W3Schools.com</a></p>
+
+<select name = "dropdown">
+            <option value = "chennai" selected>chennai</option>
+            <option value = "hyderabad">hyd</option>
+            <option value = "kurnool">kurnool</option>
+         </select>
+<br>
+<br>
+  Address:
+  <textarea></textarea><br><br>
+  Emp conctact:<br>
+  <input type="text" name="contact"><br>
+  Emp email:<br>
+  <input type="text" name="mail"><br><br><br>
+<input type="submit" value="Submit" style="border:2px solid Tomato;"></form>
+
+</body>
+</html>

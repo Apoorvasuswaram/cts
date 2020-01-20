@@ -1,0 +1,22 @@
+package com;
+public class Engine
+{
+	int engno,age;
+	String fueltype;
+}
+
+
+
+
+
+
+
+
+public class Hasexample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

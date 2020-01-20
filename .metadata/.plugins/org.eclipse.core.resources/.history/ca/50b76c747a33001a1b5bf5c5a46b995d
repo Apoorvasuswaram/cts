@@ -1,0 +1,26 @@
+package com;
+
+import java.util.Scanner;
+
+public class Alphabets {
+ 
+	private static Scanner s;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int ascii=65;
+		s = new Scanner(System.in); 
+		String s1=s.nextLine();
+		System.out.println(s1);
+		/*char ascii(char)=(char)ascii;
+		for(int i=65;i<=90;i++)
+		{
+			if(ascii>=65)
+				
+				for(int j=90;j>=65;j--)
+			
+			System.out.println("the last letter is:" +s1);
+		}*/
+	}
+
+}

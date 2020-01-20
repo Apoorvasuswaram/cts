@@ -1,0 +1,44 @@
+package com;
+class Engine
+{
+	int engno,age;
+	String fueltype;
+	
+	public int getEngno() {
+		return engno;
+	}
+	public void setEngno(int engno) {
+		this.engno = engno;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getFueltype() {
+		return fueltype;
+	}
+	public void setFueltype(String fueltype) {
+		this.fueltype = fueltype;
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+public class Hasexample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

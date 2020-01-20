@@ -1,0 +1,18 @@
+class factorial
+{
+	static int x;
+	public static void main(String arg[])
+	{
+	factorial f=new factorial();
+	f.fact(5);
+	System.out.println("factorial of n is" +x);
+	}
+	public static long fact(int num)
+	{
+	if(num>=1)
+	x=num*fact(num-1);
+ 	return x;
+	else
+	return 1;
+	}
+}

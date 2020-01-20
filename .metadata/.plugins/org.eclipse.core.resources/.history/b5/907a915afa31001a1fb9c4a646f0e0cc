@@ -1,0 +1,12 @@
+package com;
+
+public class EmployeeMain {
+
+	public static void main(String[] args) {
+		WageEmployee w=new WageEmployee(12, 1000,"appu","chennai",67,7 new Address(518005,"ashok nagar",45));
+		System.out.println(w);
+		// TODO Auto-generated method stub
+
+	}
+
+}

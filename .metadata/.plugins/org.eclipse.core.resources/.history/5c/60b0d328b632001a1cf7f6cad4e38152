@@ -1,0 +1,21 @@
+package com;
+
+public class String1 {
+	
+	String1 s1= new String1("Appu");
+	String1 s2=new String1("nandu");
+	public String1(String string) {
+		// TODO Auto-generated constructor stub
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String1 z=new String1(null);
+		System.out.println(z.s1.CharAt(2));
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+
+	}
+
+}

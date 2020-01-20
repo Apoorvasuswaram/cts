@@ -1,0 +1,16 @@
+package com;
+import java.util.Scanner;
+import java.io.*;
+
+public class WritingTextFiles{
+
+    public static void main (String [] args) throws IOException{
+        FileWriter fw= new FileWriter("testing.txt");  
+        Scanner in= new Scanner (System.in);
+        String testwords=in.nextLine();  
+        fw.write(testwords);  
+        BufferedReader r = new BufferedReader( new FileReader( "testing.txt" ) );  
+        System.out.print(r);  
+        fw.close();  
+    }
+}

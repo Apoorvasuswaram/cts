@@ -1,0 +1,31 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+
+import javax.swing.text.html.HTMLDocument.HTMLReader.PreAction;
+
+public class OracleInsert {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try
+		{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","hr");
+			//Statement stmt=con.createStatement();
+			PreparedStatement stmt=con.prepareStatement("insert into jobs values(?,?,?,?)");
+			stmt.setString(1,"nandu");
+			stmt.setString(2, "APPU");
+			stmt.setInt(3,101);
+			stmt.setInt(4, 222);
+			int i=stmt.executeUpdate();
+			System.out.println(i+"records inserted");
+			con.close();
+	}
+		catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+	}
+}

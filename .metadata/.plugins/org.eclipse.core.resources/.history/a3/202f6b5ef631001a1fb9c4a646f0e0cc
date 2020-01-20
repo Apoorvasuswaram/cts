@@ -1,0 +1,37 @@
+package com;
+
+public class WageEmployee extends Employeedetails
+{
+int numbers;
+int hours;
+
+@Override
+public String toString() {
+	return "WageEmployee [numbers=" + numbers + ", hours=" + hours + ", getEmp_id()=" + getEmp_id()
+			+ ", getEmp_salary()=" + getEmp_salary() + ", getEmp_name()=" + getEmp_name() + ", getEmp_location()="
+			+ getEmp_location() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+			+ super.toString() + "]";
+}
+public int getNumbers() {
+	return numbers;
+}
+public void setNumbers(int numbers) {
+	this.numbers = numbers;
+}
+public int getHours() {
+	return hours;
+}
+public void setHours(int hours) {
+	this.hours = hours;
+}
+public WageEmployee(int emp_id, int emp_salary,String emp_name,String emp_location,int numbers,int hours,Address address) {
+super(emp_id, emp_salary, emp_name,emp_location,address);
+this.numbers=numbers;
+this.hours=hours;
+}
+int calculateSalary()
+{
+	return emp_salary*numbers*hours;
+}
+
+}

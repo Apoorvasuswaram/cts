@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="cyan">
+<form>
+  Employee name:<br>
+  <input type="text" name="firstname"><br>
+
+  Employee ID:<br>
+  <input type="text" name="Id"><br>
+  Employee password:<br>
+  <input type="text" name="password"><br>
+  <style>
+  .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: green;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Button</h2>
+
+<button>submit</button>
+<button class="button">Styled Button</button>
+
+</body>
+</html>

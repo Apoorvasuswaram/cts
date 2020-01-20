@@ -1,0 +1,30 @@
+package com;
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Collections;
+class ProductList
+{
+	int id;  
+	String name;  
+    float price; 
+    public ProductList(int id, String name, float price) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+	}
+}
+public class Lambda1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Product> Productlist=new ArrayList<Product>();
+		ProductList.add(new Product(5,"Apple",50000f));
+		List<Float> ProductPriceList=ProductList.Stream().filter(p->p.Price>30000)
+				.map(p->p.Price)
+				.collect(Collectors.toList());
+		System.out.println(ProductPriceList);
+	}
+
+}

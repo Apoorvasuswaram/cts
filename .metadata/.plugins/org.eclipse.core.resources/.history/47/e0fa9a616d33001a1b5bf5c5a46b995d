@@ -1,0 +1,20 @@
+package com;
+
+public class Alphabets {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int ascii=65;
+		Scanner s=new Scanner(System.in); 
+		String s1=s.nextLine();
+		for(int i=65;i<=90;i++)
+		{
+			if(ascii>=65)
+			{
+				for(int j=90;j>=65;j--)
+					
+			}
+		}
+	}
+
+}
