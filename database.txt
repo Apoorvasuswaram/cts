@@ -1,0 +1,272 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+
+
+CREATE SCHEMA IF NOT EXISTS `stock` DEFAULT CHARACTER SET latin1 ;
+
+USE `stock` ;
+
+
+
+-- -----------------------------------------------------
+
+-- Table `stock`.`company`
+
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS `stock`.`company` (
+
+  `companyname` VARCHAR(45) NOT NULL ,
+
+  `turnover` INT(11) NOT NULL ,
+
+  `ceo` VARCHAR(45) NOT NULL ,
+
+  `boardofdiretors` VARCHAR(45) NOT NULL ,
+
+  `listinstock` VARCHAR(45) NOT NULL ,
+
+  `sector` VARCHAR(45) NOT NULL ,
+
+  `briefwriteup` VARCHAR(45) NOT NULL ,
+
+  `stockcode` VARCHAR(45) NOT NULL ,
+
+  PRIMARY KEY (`companyname`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+
+-- -----------------------------------------------------
+
+-- Table `stock`.`ipo_details`
+
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS `stock`.`ipo_details` (
+
+  `ipoid` INT(11) NOT NULL AUTO_INCREMENT ,
+
+  `companyname` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `opendatetime` INT(11) NULL DEFAULT NULL ,
+
+  `pricepershare` INT(11) NULL DEFAULT NULL ,
+
+  `stockexchange` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `totalnoofshares` INT(11) NULL DEFAULT NULL ,
+
+  PRIMARY KEY (`ipoid`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+
+-- -----------------------------------------------------
+
+-- Table `stock`.`ipodetails`
+
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS `stock`.`ipodetails` (
+
+  `ipoid` INT(11) NOT NULL ,
+
+  `companyname` VARCHAR(45) NOT NULL ,
+
+  `stockexchange` VARCHAR(45) NOT NULL ,
+
+  `pricepershare` INT(11) NOT NULL ,
+
+  `totalnoofshares` INT(11) NOT NULL ,
+
+  `opendatetime` INT(11) NOT NULL ,
+
+  PRIMARY KEY (`ipoid`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+
+-- -----------------------------------------------------
+
+-- Table `stock`.`sectors`
+
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS `stock`.`sectors` (
+
+  `sectorid` INT(11) NOT NULL ,
+
+  `sectorname` VARCHAR(45) NOT NULL ,
+
+  `brief` VARCHAR(45) NOT NULL ,
+
+  PRIMARY KEY (`sectorid`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+
+-- -----------------------------------------------------
+
+-- Table `stock`.`stock_exchange`
+
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS `stock`.`stock_exchange` (
+
+  `seid` INT(11) NOT NULL ,
+
+  `brief` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `contact_address` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `remarks` INT(11) NULL DEFAULT NULL ,
+
+  `stock_exchange` VARCHAR(255) NULL DEFAULT NULL ,
+
+  PRIMARY KEY (`seid`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+
+-- -----------------------------------------------------
+
+-- Table `stock`.`stock_exchange1`
+
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS `stock`.`stock_exchange1` (
+
+  `seid` INT(11) NOT NULL ,
+
+  `stockexchange` VARCHAR(45) NOT NULL ,
+
+  `brief` VARCHAR(45) NOT NULL ,
+
+  `remarks` INT(11) NULL DEFAULT NULL ,
+
+  `contact_address` VARCHAR(45) NULL DEFAULT NULL ,
+
+  PRIMARY KEY (`seid`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+
+-- -----------------------------------------------------
+
+-- Table `stock`.`stock_price`
+
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS `stock`.`stock_price` (
+
+  `companyname` VARCHAR(255) NOT NULL ,
+
+  `currentprice` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `date` DATETIME NULL DEFAULT NULL ,
+
+  `stockexchange` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `time` TIME NULL DEFAULT NULL ,
+
+  PRIMARY KEY (`companyname`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+
+-- -----------------------------------------------------
+
+-- Table `stock`.`users`
+
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS `stock`.`users` (
+
+  `id` INT(11) NOT NULL ,
+
+  `username` VARCHAR(45) NOT NULL ,
+
+  `password` VARCHAR(45) NOT NULL ,
+
+  `email` VARCHAR(45) NOT NULL ,
+
+  `phone` INT(11) NOT NULL ,
+
+  `confirmed` VARCHAR(45) CHARACTER SET 'latin1' COLLATE 'latin1_bin' NOT NULL ,
+
+  `firstname` VARCHAR(45) NOT NULL ,
+
+  `gender` VARCHAR(45) NOT NULL ,
+
+  `lastname` VARCHAR(45) NOT NULL ,
+
+  `address` VARCHAR(45) NOT NULL ,
+
+  `age` INT(11) NOT NULL ,
+
+  `sal` INT(11) NOT NULL ,
+
+  `usertype` VARCHAR(45) NOT NULL ,
+
+  `mobileno` INT(11) NULL DEFAULT NULL ,
+
+  PRIMARY KEY (`username`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+USE `stock` ;
+
+
+
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
